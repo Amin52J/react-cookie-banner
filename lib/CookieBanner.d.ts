@@ -21,6 +21,8 @@ export declare type CookieBannerRequiredProps = {
     };
     /** used to set the cookie path */
     cookiePath?: string;
+    /** used to set the cookie domain */
+    cookieDomain?: string;
     /** whether the cookie banner should be dismissed on scroll or not */
     dismissOnScroll?: boolean;
     /** amount of pixel the user need to scroll to dismiss the cookie banner */
@@ -60,6 +62,7 @@ export default class CookieBanner extends React.Component<CookieBanner.Props, St
             hours: PropTypes.Requireable<number>;
         }>>;
         cookiePath: PropTypes.Requireable<string>;
+        cookieDomain: PropTypes.Requireable<string>;
         dismissOnScroll: PropTypes.Requireable<boolean>;
         dismissOnScrollThreshold: PropTypes.Requireable<number>;
         message: PropTypes.Requireable<string>;
