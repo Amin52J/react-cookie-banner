@@ -152,7 +152,7 @@ export default class CookieBanner extends React.Component<CookieBanner.Props, St
   onAccept = () => {
     const { cookies, cookie, cookieExpiration, cookiePath: path, cookieDomain: domain, onAccept } = this.props as CookieBannerDefaultedProps;
 
-    cookies.set(cookie, true, {
+    cookies.set(cookie, 'dismiss', {
       path,
       domain,
       expires: new Date(Date.now() + (this.getSecondsSinceExpiration(cookieExpiration) * 1000))
